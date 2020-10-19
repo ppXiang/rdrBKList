@@ -41,7 +41,7 @@ func (tkl *TopKeyList) Pop() interface{} {
 	return bigKey
 }
 
-func (tkl *TopKeyList) update(bigKey *BigKey, keyName string, keyBytes uint64) {
+func (tkl *TopKeyList) Update(bigKey *BigKey, keyName string, keyBytes uint64) {
 	bigKey.KeyName = keyName
 	bigKey.Bytes = keyBytes
 	heap.Fix(tkl, bigKey.index)
